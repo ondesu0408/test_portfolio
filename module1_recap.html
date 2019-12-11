@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/css/module1_recap.css">
+        <title>Module1 Recap</title>
+    </head>
+    <body>
+        <h1>This is the recap for Module 1</h1>
+        <header>
+            <nav>
+                <h2>Navigation Menu</h2>
+                <ul>
+                    <li><a href="#main">Main</a></li>
+                    <li><a href="#middle">Middle</a></li>
+                    <li><a href="#bottom">Footer</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="flex">
+            <main>
+                <section>
+                    <h2 id="main">Main Section</h2>
+                    <section>
+                        <h3>Nav bar</h3>
+                        <code>
+                            nav li { display: inline; margin: 0 15px; }
+                    </code>
+                    </section>
+                    <section>
+                        <h3>Aside</h3>
+                        <code id="strikeThrough">
+                            aside {
+                                float: right;
+                                padding: 70px 0 30px;
+                                position: relative;
+                                width: 25%;
+                            }
+                        </code>
+                        <br/><br/>
+                        <code>
+                            .flex {
+                                display: flex;
+                                flex-flow: row wrap;
+                            }
+                            
+                            main {
+                                width: 53%;
+                                padding-left: 2vw;
+                                padding-right: 2vw;
+                            }
+                            
+                            aside {
+                                width: 30%;
+                                padding-left: 2vw;
+                                padding-right: 2vw;
+                                font-size: 1.2em;
+                            }
+                        </code>
+                    </section>
+                    <section>
+                        <h3>Sectioning - Needs header</h3>
+                        <p>
+                            Tips: Use &lt;h1&gt; for body tag and use &lt;h2&gt; and &lt;h3&gt; for other section's header tags.<br/>
+                            Also, <a href="https://chrome.google.com/webstore/detail/html5-outliner/afoibpobokebhgfnknfndkgemglggomo" target="_blank">This Extention</a> is really helpful for HTML5 Outliner.
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Embed JS code for a table of Contents</h3>
+                        <p>
+                            To check if there is a header for each section
+                        </p>
+                        <h4>Table of content</h4>
+                        <a href="javascript:(function(){var i=function(a){this.sections=[];this.startingNode=a};i.prototype={heading:false,append:function(a){a.container=this;this.sections.push(a)},asHTML:function(a){var b=u(this.heading);if(a)b='&lt;a href=&quot;#'+v(this.startingNode)+'&quot;&gt;'+b+&quot;&lt;/a&gt;&quot;;return b+q(this.sections,a)}};var q=function(a,b){for(var f=&quot;&quot;,c=0;c&lt;a.length;c++)f+=&quot;&lt;li&gt;&quot;+a[c].asHTML(b)+&quot;&lt;/li&gt;&quot;;return f==&quot;&quot;?f:&quot;&lt;ol&gt;&quot;+f+&quot;&lt;/ol&gt;&quot;},r=function(a){a=a.heading;return h(a)?j(a):1},u=function(a){if(h(a)){if(k(a)==&quot;HGROUP&quot;)a=a.getElementsByTagName(&quot;h&quot;+
+                        -j(a))[0];return a.textContent||a.innerText||&quot;&lt;i&gt;No text content inside &quot;+a.nodeName+&quot;&lt;/i&gt;&quot;}return&quot;&quot;+a},v=function(a){var b=a.getAttribute(&quot;id&quot;);if(b)return b;do b=&quot;h5o-&quot;+ ++s;while(t.getElementById(b));a.setAttribute(&quot;id&quot;,b);return b},e,d,g,s,t,w=function(a,b,f){var c=a;a:for(;c;){b(c);if(c.firstChild){c=c.firstChild;continue a}for(;c;){f(c);if(c.nextSibling){c=c.nextSibling;continue a}c=c==a?null:c.parentNode}}},x=function(a){if(!h(o(g)))if(l(a)||m(a)){e!=null&amp;&amp;g.push(e);e=a;d=new i(a);e.outline=
+                        {sections:[d],startingNode:a,asHTML:function(c){return q(this.sections,c)}}}else if(e!=null)if(h(a)){if(d.heading)if(j(a)&gt;=r(n(e.outline))){var b=new i(a);e.outline.sections.push(b);d=b;d.heading=a}else{b=false;var f=d;do{if(j(a)&lt;r(f)){b=new i(a);f.append(b);d=b;d.heading=a;b=true}f=f.container}while(!b)}else d.heading=a;g.push(a)}},y=function(a){var b=o(g);if(h(b))b==a&amp;&amp;g.pop();else{if((l(a)||m(a))&amp;&amp;!d.heading)d.heading=&quot;&lt;i&gt;Untitled &quot;+k(a)+&quot;&lt;/i&gt;&quot;;if(l(a)&amp;&amp;g.length&gt;0){e=g.pop();d=n(e.outline);for(b=
+                        0;b&lt;a.outline.sections.length;b++)d.append(a.outline.sections[b])}else if(m(a)&amp;&amp;g.length&gt;0){e=g.pop();for(d=n(e.outline);d.sections.length&gt;0;)d=n(d)}else if(l(a)||m(a))d=e.outline.sections[0]}},k=function(a){return a.tagName.toUpperCase()},p=function(a){return function(b){return z(b)&amp;&amp;(new RegExp(a,&quot;i&quot;)).test(k(b))}},m=p(&quot;^BLOCKQUOTE|BODY|DETAILS|FIELDSET|FIGURE|TD$&quot;),l=p(&quot;^ARTICLE|ASIDE|NAV|SECTION$&quot;),h=p(&quot;^H[1-6]|HGROUP$&quot;),z=function(a){return a&amp;&amp;a.tagName},j=function(a){var b=k(a);if(b==&quot;HGROUP&quot;)for(b=
+                        1;b&lt;=6;b++){if(a.getElementsByTagName(&quot;H&quot;+b).length&gt;0)return-b}else return-parseInt(b.substr(1))},n=function(a){return o(a.sections)},o=function(a){return a[a.length-1]};HTML5Outline=function(a){s=0;t=a.ownerDocument||window.document;d=e=null;g=[];w(a,x,y);return e!=null?e.outline:null}})();
+                        ;(function(){var b=function(e,f){for(var d=0;d&lt;e.length;d++)e[d].setAttribute(&quot;style&quot;,f)},g=HTML5Outline(document.body).asHTML(true),a=document.createElement(&quot;div&quot;);b([a],&quot;position:fixed;top:10px;right:10px;border:2px solid #000;background:rgba(255,255,255,.9);padding:15px;z-index:999;max-height:400px;overflow:auto;font-size:11px;font-family:Verdana, sans-serif;&quot;);a.innerHTML=g;b(a.getElementsByTagName(&quot;li&quot;),&quot;list-style:decimal outside;margin-left:20px;font-size:11px;font-family:Verdana, sans-serif;&quot;);
+                        b(a.getElementsByTagName(&quot;ol&quot;),&quot;margin: 0;padding:0;font-size:11px;font-family:Verdana, sans-serif;&quot;);b(a.getElementsByTagName(&quot;a&quot;),&quot;color:#008;text-decoration:underline;font-size:11px;font-family:Verdana, sans-serif;&quot;);var c=a.insertBefore(document.createElement(&quot;a&quot;),a.firstChild);b([c],&quot;float: right; margin: 0 0 5px 5px; padding: 5px; border: 1px #008 solid;color:#00f;background-color:#ccf;&quot;);c.innerHTML=&quot;Close&quot;;c.href=&quot;#&quot;;c.onclick=function(){document.body.removeChild(a);a=c=null};document.body.appendChild(a)})();
+                        ;" title="TableDeMatiere">
+                        Click here for displaying the table of contents!</a>       
+                    </section>
+                    <section>
+                        <h3>Hide h1 using offset</h3>
+                        <code>
+                                nav header {
+                                    position: absolute !important;
+                                    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+                                    clip: rect(1px, 1px, 1px, 1px);
+                                    padding:0 !important;
+                                    border:0 !important;
+                                    height: 1px !important; 
+                                    width: 1px !important; 
+                                    overflow: hidden;
+                        }
+                        </code>
+                    </section>
+                    <section>
+                        <h3>Detail element with Polyfill</h3>
+                        <details>
+                            <summary>What is Polyfill?</summary>
+                            <p>
+                                Polyfill is a piece of JS which enables every browser utilize some HTML5 elements.<br/>
+                                Cf: Here you can check if a browser support an element. <a href="https://caniuse.com/" target="_blank"> https://caniuse.com/ </a>
+                            </p>
+                        </details>
+                    </section>
+                    <section>
+                        <h3>Use Time and Mark element</h3>
+                        <p><mark>Today</mark> is <time datetiime="2019-07-08">July 8, 2019</time></p>
+                    </section>
+                    <section id="middle">
+                        <h3>Use Download Attribute and Translation no</h3>
+                        <a href="assets/image/demoLogo.png" download="thanks">Download a picture</a>
+                        <p>Don't translate next: <span tranlate="no">Ham Buffet</span></p>
+                    </section>
+                    <section itemscope itemtype="http://schema.org/Person">
+                            <h3>Implement Microdata</h3>
+                            <dl>
+                                <dt>Name</dt>
+                                <dd itemprop="name">David Park</dd>
+                                <dt>Position</dt>
+                                <dd><span itemprop="jobTitle">Front End Web Developer</span></dd>
+                                <dt>Orgaization</dt>
+                                <dd itemprop="affiliation">University of Michigan</dd>
+                                <dd>Image</dd>
+                                <img itemprop="image" src="assets/image/demoLogo.png" alt="picture demo">
+                            </dl>
+                            <p>Test it in <a href="https://search.google.com/structured-data/testing-tool/u/0/" target="_blank">here</a></p>
+                    </section>
+                    <section itemscope itemtype="http://schema.org/Person">
+                        <h3>Responsive Web - use percentage</h3>
+                        <p>Tip: Width total 85-93%</p>
+                    </section>
+                </section>
+            </main>
+            <aside>
+                <h2>Aside - What I have learned in Module 1</h2>
+                <ul>
+                    <li>Nav bar</li>
+                    <li>Aside</li>
+                    <li>Sectioning - Needs header</li>
+                    <li>Embed JS code for a table of Contents</li>
+                    <li>Use 5 Main Sections</li>
+                    <li>Hide h1 using offset</li>
+                    <li>Detail element with Polyfill</li>
+                    <li>Use Time and Track element</li>
+                    <li>Use Download Attribute and Translation no</li>
+                    <li>Implement Microdata</li>
+                    <li>Responsive Web - use percentage</li>
+                </ul>
+            </aside>
+        </div>
+        <footer id="bottom">
+            <h2>This is the footer Section</h2>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </footer>
+        <script>
+                (function(e,t){function r(e){var t=null;if(e.firstChild.nodeName!="#text"){return e.firstChild}else{e=e.firstChild;do{e=e.nextSibling}while(e&&e.nodeName=="#text");return e||null}}function i(e){var t=e.nodeName.toUpperCase();if(t=="DETAILS"){return false}else if(t=="SUMMARY"){return true}else{return i(e.parentNode)}}function s(e){var n=e.type=="keypress",r=e.target||e.srcElement;if(n||i(r)){if(n){n=e.which||e.keyCode;if(n==32||n==13){}else{return}}var s=this.getAttribute("open");if(s===null){this.setAttribute("open","open")}else{this.removeAttribute("open")}setTimeout(function(){t.body.className=t.body.className},13);if(n){e.preventDefault&&e.preventDefault();return false}}}function o(){var e=t.createElement("style"),n=t.getElementsByTagName("head")[0],r=e.innerText===undefined?"textContent":"innerText";var i=["details{display: block;}","details > *{display: none;}","details.open > *{display: block;}","details[open] > *{display: block;}","details > summary:first-child{display: block;cursor: pointer;}",'summary:before{content: "▶ ";}',"details[open]{display: block;}"];f=i.length;e[r]=i.join("\n");n.insertBefore(e,n.firstChild)}if("open"in t.createElement("details"))return;var n=function(){if(t.addEventListener){return function(t,r,i){if(t&&t.nodeName||t===e){t.addEventListener(r,i,false)}else if(t&&t.length){for(var s=0;s<t.length;s++){n(t[s],r,i)}}}}else{return function(t,r,i){if(t&&t.nodeName||t===e){t.attachEvent("on"+r,function(){return i.call(t,e.event)})}else if(t&&t.length){for(var s=0;s<t.length;s++){n(t[s],r,i)}}}}}();var u=t.getElementsByTagName("details"),a,f=u.length,l,c=null,h=t.createElement("summary");h.appendChild(t.createTextNode("Details"));while(f--){c=r(u[f]);if(c!=null&&c.nodeName.toUpperCase()=="SUMMARY"){}else{c=t.createElement("summary");c.appendChild(t.createTextNode("Details"));if(u[f].firstChild){u[f].insertBefore(c,u[f].firstChild)}else{u[f].appendChild(c)}}l=u[f].childNodes.length;while(l--){if(u[f].childNodes[l].nodeName==="#text"&&(u[f].childNodes[l].nodeValue||"").replace(/\s/g,"").length){a=t.createElement("text");a.appendChild(u[f].childNodes[l]);u[f].insertBefore(a,u[f].childNodes[l])}}c.legend=true;c.tabIndex=0}t.createElement("details");n(u,"click",s);n(u,"keypress",s);o()})(window,document)    
+        </script>
+    </body>
+</html>
